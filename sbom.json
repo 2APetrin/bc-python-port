@@ -1,0 +1,1071 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:618a195e-92f1-4ca8-9647-df0c80bd5daa",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-11-05T17:58:39Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "group": "CycloneDX",
+          "name": "cyclonedx-py",
+          "version": "7.2.1",
+          "description": "CycloneDX Software Bill of Materials (SBOM) generator for Python projects and environments",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0",
+                "acknowledgement": "declared"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python/actions",
+              "type": "build-system"
+            },
+            {
+              "url": "https://pypi.org/project/cyclonedx-bom/",
+              "type": "distribution"
+            },
+            {
+              "url": "https://cyclonedx-bom-tool.readthedocs.io/",
+              "type": "documentation"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python/issues",
+              "type": "issue-tracker"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python/blob/main/LICENSE",
+              "type": "license"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python/blob/main/CHANGELOG.md",
+              "type": "release-notes"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python/",
+              "type": "vcs"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python/#readme",
+              "type": "website"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "group": "CycloneDX",
+          "name": "cyclonedx-python-lib",
+          "version": "11.5.0",
+          "description": "Python library for CycloneDX",
+          "licenses": [
+            {
+              "license": {
+                "id": "Apache-2.0",
+                "acknowledgement": "declared"
+              }
+            }
+          ],
+          "externalReferences": [
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python-lib/actions",
+              "type": "build-system"
+            },
+            {
+              "url": "https://pypi.org/project/cyclonedx-python-lib/",
+              "type": "distribution"
+            },
+            {
+              "url": "https://cyclonedx-python-library.readthedocs.io/",
+              "type": "documentation"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+              "type": "issue-tracker"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/LICENSE",
+              "type": "license"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python-lib/blob/main/CHANGELOG.md",
+              "type": "release-notes"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python-lib",
+              "type": "vcs"
+            },
+            {
+              "url": "https://github.com/CycloneDX/cyclonedx-python-lib/#readme",
+              "type": "website"
+            }
+          ]
+        },
+        {
+          "type": "library",
+          "author": "OWASP Foundation",
+          "group": "org.cyclonedx",
+          "name": "cyclonedx-maven-plugin",
+          "version": "2.9.1",
+          "description": "CycloneDX Maven plugin",
+          "hashes": [
+            {
+              "alg": "MD5",
+              "content": "9c7a565cf28cce58557d0c621c5ea4b1"
+            },
+            {
+              "alg": "SHA-1",
+              "content": "be882d5a22050bfa9d19090b1420c188617d0e1c"
+            },
+            {
+              "alg": "SHA-256",
+              "content": "698e0f37184a5b28c245c4065fd036dfce253b52f82fbb7113d81d36326cc249"
+            },
+            {
+              "alg": "SHA-512",
+              "content": "c0f0b11026858166f872a2eb54719492e5cecaa0bc9cd6b30b3ecb4a174eed220f4a1b5829d18d6734128e778d3cb3db7ffed177c92866133129cb29081814a0"
+            },
+            {
+              "alg": "SHA-384",
+              "content": "d80964707dfe5caca8c70521d5066f57589304c0a657e6fbc7c0614ea0fc7b3b3dbe7778361eee0f54ba111e9cb0ffcb"
+            },
+            {
+              "alg": "SHA3-384",
+              "content": "80bc3a275d9514bc457461ff52a72add8c7ecbbc01d8912efce57139016c544ee776981851be0a58fa977ab4221f703f"
+            },
+            {
+              "alg": "SHA3-256",
+              "content": "142317d6f245390f4fd2d0c100b16281b8dfc5c0c2cff86943bdcc97039cb699"
+            },
+            {
+              "alg": "SHA3-512",
+              "content": "af0fb9137c90b65d1a07f72e4d51ae509956cdb8800f35c961b037cdda1fe4a14ce3b496cef71ba85f1621affcfe29cd42704ae4191ff0b090a9602087c8997b"
+            }
+          ]
+        }
+      ]
+    },
+    "component": {
+      "type": "library",
+      "bom-ref": "pkg:maven/bc-python-port/bc-python-port@1.0-SNAPSHOT?type=jar",
+      "group": "bc-python-port",
+      "name": "bc-python-port",
+      "version": "1.0-SNAPSHOT",
+      "purl": "pkg:maven/bc-python-port/bc-python-port@1.0-SNAPSHOT?type=jar"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "requirements-L1",
+      "name": "arrow",
+      "version": "1.4.0",
+      "description": "requirements line 1: arrow==1.4.0",
+      "purl": "pkg:pypi/arrow@1.4.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/arrow/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L2",
+      "name": "attrs",
+      "version": "25.4.0",
+      "description": "requirements line 2: attrs==25.4.0",
+      "purl": "pkg:pypi/attrs@25.4.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/attrs/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L3",
+      "name": "boolean.py",
+      "version": "5.0",
+      "description": "requirements line 3: boolean.py==5.0",
+      "purl": "pkg:pypi/boolean.py@5.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/boolean.py/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L4",
+      "name": "chardet",
+      "version": "5.2.0",
+      "description": "requirements line 4: chardet==5.2.0",
+      "purl": "pkg:pypi/chardet@5.2.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/chardet/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L5",
+      "name": "cyclonedx-bom",
+      "version": "7.2.1",
+      "description": "requirements line 5: cyclonedx-bom==7.2.1",
+      "purl": "pkg:pypi/cyclonedx-bom@7.2.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/cyclonedx-bom/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L6",
+      "name": "cyclonedx-python-lib",
+      "version": "11.5.0",
+      "description": "requirements line 6: cyclonedx-python-lib==11.5.0",
+      "purl": "pkg:pypi/cyclonedx-python-lib@11.5.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/cyclonedx-python-lib/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L7",
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "description": "requirements line 7: defusedxml==0.7.1",
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/defusedxml/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L8",
+      "name": "fqdn",
+      "version": "1.5.1",
+      "description": "requirements line 8: fqdn==1.5.1",
+      "purl": "pkg:pypi/fqdn@1.5.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/fqdn/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L9",
+      "name": "idna",
+      "version": "3.11",
+      "description": "requirements line 9: idna==3.11",
+      "purl": "pkg:pypi/idna@3.11",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/idna/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L10",
+      "name": "isoduration",
+      "version": "20.11.0",
+      "description": "requirements line 10: isoduration==20.11.0",
+      "purl": "pkg:pypi/isoduration@20.11.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/isoduration/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L11",
+      "name": "jsonpointer",
+      "version": "3.0.0",
+      "description": "requirements line 11: jsonpointer==3.0.0",
+      "purl": "pkg:pypi/jsonpointer@3.0.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/jsonpointer/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L12",
+      "name": "jsonschema",
+      "version": "4.25.1",
+      "description": "requirements line 12: jsonschema==4.25.1",
+      "purl": "pkg:pypi/jsonschema@4.25.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/jsonschema/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L13",
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "description": "requirements line 13: jsonschema-specifications==2025.9.1",
+      "purl": "pkg:pypi/jsonschema-specifications@2025.9.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/jsonschema-specifications/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L14",
+      "name": "lark",
+      "version": "1.3.1",
+      "description": "requirements line 14: lark==1.3.1",
+      "purl": "pkg:pypi/lark@1.3.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/lark/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L15",
+      "name": "license-expression",
+      "version": "30.4.4",
+      "description": "requirements line 15: license-expression==30.4.4",
+      "purl": "pkg:pypi/license-expression@30.4.4",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/license-expression/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L16",
+      "name": "lxml",
+      "version": "6.0.2",
+      "description": "requirements line 16: lxml==6.0.2",
+      "purl": "pkg:pypi/lxml@6.0.2",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/lxml/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L17",
+      "name": "packageurl-python",
+      "version": "0.17.5",
+      "description": "requirements line 17: packageurl-python==0.17.5",
+      "purl": "pkg:pypi/packageurl-python@0.17.5",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/packageurl-python/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L18",
+      "name": "packaging",
+      "version": "25.0",
+      "description": "requirements line 18: packaging==25.0",
+      "purl": "pkg:pypi/packaging@25.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/packaging/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L19",
+      "name": "pip-requirements-parser",
+      "version": "32.0.1",
+      "description": "requirements line 19: pip-requirements-parser==32.0.1",
+      "purl": "pkg:pypi/pip-requirements-parser@32.0.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/pip-requirements-parser/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L20",
+      "name": "py-serializable",
+      "version": "2.1.0",
+      "description": "requirements line 20: py-serializable==2.1.0",
+      "purl": "pkg:pypi/py-serializable@2.1.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/py-serializable/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L21",
+      "name": "py4j",
+      "version": "0.10.9.9",
+      "description": "requirements line 21: py4j==0.10.9.9",
+      "purl": "pkg:pypi/py4j@0.10.9.9",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/py4j/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L22",
+      "name": "pyparsing",
+      "version": "3.2.5",
+      "description": "requirements line 22: pyparsing==3.2.5",
+      "purl": "pkg:pypi/pyparsing@3.2.5",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/pyparsing/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L23",
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "description": "requirements line 23: python-dateutil==2.9.0.post0",
+      "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/python-dateutil/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L24",
+      "name": "referencing",
+      "version": "0.37.0",
+      "description": "requirements line 24: referencing==0.37.0",
+      "purl": "pkg:pypi/referencing@0.37.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/referencing/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L25",
+      "name": "rfc3339-validator",
+      "version": "0.1.4",
+      "description": "requirements line 25: rfc3339-validator==0.1.4",
+      "purl": "pkg:pypi/rfc3339-validator@0.1.4",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/rfc3339-validator/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L26",
+      "name": "rfc3986-validator",
+      "version": "0.1.1",
+      "description": "requirements line 26: rfc3986-validator==0.1.1",
+      "purl": "pkg:pypi/rfc3986-validator@0.1.1",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/rfc3986-validator/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L27",
+      "name": "rfc3987-syntax",
+      "version": "1.1.0",
+      "description": "requirements line 27: rfc3987-syntax==1.1.0",
+      "purl": "pkg:pypi/rfc3987-syntax@1.1.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/rfc3987-syntax/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L28",
+      "name": "rpds-py",
+      "version": "0.28.0",
+      "description": "requirements line 28: rpds-py==0.28.0",
+      "purl": "pkg:pypi/rpds-py@0.28.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/rpds-py/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L29",
+      "name": "six",
+      "version": "1.17.0",
+      "description": "requirements line 29: six==1.17.0",
+      "purl": "pkg:pypi/six@1.17.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/six/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L30",
+      "name": "sortedcontainers",
+      "version": "2.4.0",
+      "description": "requirements line 30: sortedcontainers==2.4.0",
+      "purl": "pkg:pypi/sortedcontainers@2.4.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/sortedcontainers/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L31",
+      "name": "typing_extensions",
+      "version": "4.15.0",
+      "description": "requirements line 31: typing_extensions==4.15.0",
+      "purl": "pkg:pypi/typing-extensions@4.15.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/typing_extensions/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L32",
+      "name": "tzdata",
+      "version": "2025.2",
+      "description": "requirements line 32: tzdata==2025.2",
+      "purl": "pkg:pypi/tzdata@2025.2",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/tzdata/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L33",
+      "name": "uri-template",
+      "version": "1.3.0",
+      "description": "requirements line 33: uri-template==1.3.0",
+      "purl": "pkg:pypi/uri-template@1.3.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/uri-template/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "requirements-L34",
+      "name": "webcolors",
+      "version": "25.10.0",
+      "description": "requirements line 34: webcolors==25.10.0",
+      "purl": "pkg:pypi/webcolors@25.10.0",
+      "externalReferences": [
+        {
+          "url": "https://pypi.org/simple/webcolors/",
+          "type": "distribution",
+          "comment": "implicit dist url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.82?type=jar",
+      "group": "org.bouncycastle",
+      "name": "bcpkix-jdk18on",
+      "version": "1.82",
+      "description": "The Bouncy Castle Java APIs for CMS, PKCS, EAC, TSP, CMP, CRMF, OCSP, and certificate generation. This jar contains APIs for Java 1.8 and later. The APIs are designed primarily to be used in conjunction with the BC Java provider but may also be used with other providers providing cryptographic services.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "9958d2f8aa097a31806756542e461079"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "ad7b7155abac3e4e4f73579d5176c11f7659c560"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "bdc723e20834832ac6af136cb5b5ff05e43b71d4fa151cc6510d9212ee086e63"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "530b4f8818fe9918ee4d945985d0408024a0107b709cd4963147f0f7e364004078878398d4c1ce357e502cd98f97a6985ea1628c9b98fd8ac0adbe00c1330898"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "57fd639b0a1bce5cccb7984fce86cb65397111519feefa75260961d0def9e646363047d54af88701281823a9cc09a0cb"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "997838ee62cd2c05640efdd7f46593b683a09ead69f6b1cda37c2e0755a86f565f27dc1c5ed21cd9a2e14f9ef22becdd"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "181cde82f2f2e4483ee85b8695aca990f2eec5e2fb1b5b3855c384718ccae580"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "2f979dec5105f7d46412257548b2c9cdd16e02d3b530220f3726b0bb423fd3eb314d737fcba501df18a86e3ee9b4163af899ba1301d09de0c9cd81c961123752"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Bouncy Castle Licence",
+            "url": "https://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.82?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://www.bouncycastle.org/download/bouncy-castle-java/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/bcgit/bc-java/issues",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/bcgit/bc-java",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.82?type=jar",
+      "group": "org.bouncycastle",
+      "name": "bcutil-jdk18on",
+      "version": "1.82",
+      "description": "The Bouncy Castle Java APIs for ASN.1 extension and utility APIs used to support bcpkix and bctls. This jar contains APIs for Java 1.8 and later.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ca33a7c1e7e60f68333e127c75f5ab45"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "1850911d674c91ce6444783ff10478e2c6e9bbf9"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "4420691958ad1c0ba275a6d6d8a6317adbdbdc9277055b6a72aa89c88cda8c7d"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "61a4bbc07402fafe91a55170a3f04a87060c6721bc1d52865dfa9445b97dac92cd6b4c8558a7adbbf0dcb2bc62f4af72c547c366fb449e207d7436fbdead3c31"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "f5aa8faf96128bdc7605e9991da58eff4e56b9a96aebc399d69f35ba4346a7878c3171b88fffe8a969e7195054356408"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "19d950e37f3927b6116b99f4dfa4b9b83b2cccfb469a2302c55e1db22d6e4514e8991979caf585598f3857b9282ee667"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "8ca6f590c1e6708076432e9e0db01e3c52f910918d5bc53c462c3ba56c330ab5"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "6f120f75980fafb4a2ae33adbaf6ef2ac077e7c36343dc889f0cb9423fa4f7f16aa0c2fbfc9cf12835bbc5f91d8931ce68bafd6653a6c62660d291fee3bb62ff"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Bouncy Castle Licence",
+            "url": "https://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.82?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://www.bouncycastle.org/download/bouncy-castle-java/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/bcgit/bc-java/issues",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/bcgit/bc-java",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.82?type=jar",
+      "group": "org.bouncycastle",
+      "name": "bcprov-jdk18on",
+      "version": "1.82",
+      "description": "The Bouncy Castle Crypto package is a Java implementation of cryptographic algorithms. This jar contains the JCA/JCE provider and low-level API for the BC Java version 1.82 for Java 1.8 and later.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "73520ba13118979db17136db32a8c401"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "e1118397395d21909a1b7b15120d0c2a68d7fd0c"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "14cde2fdfaa8890480a8e5b67aceef0c90f96682c1e23c133bafdc9e0b3255ce"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "acf5e383a93cb16b3ad5a531b86acda3c7fad306c655b1090bad576898707ac4516b2681fc4993ee1dbe3ecbeb05156b836e17cb0f6db811d81d1e3d762a4151"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "17937df1cc7f2bc82b1d3be96ae9e411c8c6be9fba12f45a00016136539594584c0c3414fcbf22635e8aa958773eb3c9"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "a1f9cf6c9a75ba5b83cbcee081f1482383a0fe111eeb6a5663feaeef9046fe2b46c1299b8355fc99987e0053317b911d"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "a5678d424b2754823a997ddac7727d51294218c8a831eb30e4d12d00abf02704"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "ad5ad754087d6b089d3060deff7b8dd9fa2a3ea82d57c62c3d4f5336212447e882f489ada58f69858bd84f347cc0f5575141d8895a29e7da6c546412b40ec344"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "name": "Bouncy Castle Licence",
+            "url": "https://www.bouncycastle.org/licence.html"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.82?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://www.bouncycastle.org/download/bouncy-castle-java/",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/bcgit/bc-java/issues",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/bcgit/bc-java",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/net.sf.py4j/py4j@0.10.9.9?type=jar",
+      "group": "net.sf.py4j",
+      "name": "py4j",
+      "version": "0.10.9.9",
+      "description": "Py4J enables Python programs running in a Python interpreter to dynamically access Java objects in a Java Virtual Machine. Methods are called as if the Java objects resided in the Python interpreter and Java collections can be accessed through standard Python collection methods. Py4J also enables Java programs to call back Python objects.",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "82241e9bdc71cb59a05ad153f1feca7f"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "801fc9ed56ae8052805b86cb9c459257a633e75e"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "bc4c4b1e731ab18496cc6eab31e7353701b32fc5c3047764a0656acf5344a54b"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "63b2bdaebd853bccb96f176898e53b2040a733a73afde2bf92b5a3c1057c083d291f95f0938f84b82782889ce9e06538227140326b3569101bc578d55cd0b579"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "e7a55cb93df90bd6a12ab2efb8db564827cea4b281b2959432ddeb36637f66583215a358ab577ad65cc339ea813d2999"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "549e9ff58862841c0a027ae37606edc5d130dcf521993b61f7d47434790c228088c42e6b8f3d570f0aa4bad387f0c385"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "d9a6a5fc9622de23b4392cee741115af3222526032bf35baa38dfc18160666cb"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "85371a86a34a8bd359f0311bf1b0ee06bf99fec5ee97649727fe518eeb8a605a35b230a4c4c3c02e0ae62f6b2986f9d6c3d4e18396d48fa125ec74c14bc80f0c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:maven/net.sf.py4j/py4j@0.10.9.9?type=jar",
+      "externalReferences": [
+        {
+          "url": "http://nexus.sonatype.org/oss-repository-hosting.html/py4j",
+          "type": "website"
+        },
+        {
+          "url": "https://oss.sonatype.org/service/local/staging/deploy/maven2/",
+          "type": "distribution-intake"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/bc-python-port/bc-python-port@1.0-SNAPSHOT?type=jar",
+      "group": "bc-python-port",
+      "name": "bc-python-port",
+      "version": "1.0-SNAPSHOT",
+      "purl": "pkg:maven/bc-python-port/bc-python-port@1.0-SNAPSHOT?type=jar"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "requirements-L1"
+    },
+    {
+      "ref": "requirements-L10"
+    },
+    {
+      "ref": "requirements-L11"
+    },
+    {
+      "ref": "requirements-L12"
+    },
+    {
+      "ref": "requirements-L13"
+    },
+    {
+      "ref": "requirements-L14"
+    },
+    {
+      "ref": "requirements-L15"
+    },
+    {
+      "ref": "requirements-L16"
+    },
+    {
+      "ref": "requirements-L17"
+    },
+    {
+      "ref": "requirements-L18"
+    },
+    {
+      "ref": "requirements-L19"
+    },
+    {
+      "ref": "requirements-L2"
+    },
+    {
+      "ref": "requirements-L20"
+    },
+    {
+      "ref": "requirements-L21"
+    },
+    {
+      "ref": "requirements-L22"
+    },
+    {
+      "ref": "requirements-L23"
+    },
+    {
+      "ref": "requirements-L24"
+    },
+    {
+      "ref": "requirements-L25"
+    },
+    {
+      "ref": "requirements-L26"
+    },
+    {
+      "ref": "requirements-L27"
+    },
+    {
+      "ref": "requirements-L28"
+    },
+    {
+      "ref": "requirements-L29"
+    },
+    {
+      "ref": "requirements-L3"
+    },
+    {
+      "ref": "requirements-L30"
+    },
+    {
+      "ref": "requirements-L31"
+    },
+    {
+      "ref": "requirements-L32"
+    },
+    {
+      "ref": "requirements-L33"
+    },
+    {
+      "ref": "requirements-L34"
+    },
+    {
+      "ref": "requirements-L4"
+    },
+    {
+      "ref": "requirements-L5"
+    },
+    {
+      "ref": "requirements-L6"
+    },
+    {
+      "ref": "requirements-L7"
+    },
+    {
+      "ref": "requirements-L8"
+    },
+    {
+      "ref": "requirements-L9"
+    },
+    {
+      "ref": "pkg:maven/bc-python-port/bc-python-port@1.0-SNAPSHOT?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.82?type=jar",
+        "pkg:maven/net.sf.py4j/py4j@0.10.9.9?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.bouncycastle/bcpkix-jdk18on@1.82?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.82?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.bouncycastle/bcutil-jdk18on@1.82?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.82?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:maven/org.bouncycastle/bcprov-jdk18on@1.82?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:maven/net.sf.py4j/py4j@0.10.9.9?type=jar",
+      "dependsOn": []
+    }
+  ]
+}
