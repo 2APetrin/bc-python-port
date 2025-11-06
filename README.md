@@ -34,13 +34,13 @@ sudo apt install openjdk-21-jdk
 ```
 sudo apt install maven
 ```
-- Запустить Java-сервер с помощью скрипта
+- Собрать Java-часть с помощью maven
 ```
-chmod u+x run-java-part.sh && ./run-java-part.sh
+mvn package
 ```
-- Запустить требуемый python-файл, например, ``example.py``
+- Запустить требуемый python-файл, например, ``lazy_behaviour.py``
 ```
-python3 example.py
+python3 lazy_behaviour.py
 ```
 
 ## Генерация SBOM
@@ -56,10 +56,22 @@ chmod u+x generate_sbom.sh && ./generate_sbom.sh
 - **CycloneDX** (cyclonedx-python и cyclonedx-cli) - набор [инструментов](https://cyclonedx.org/capabilities/sbom/) для создания SBOM (Software Bill Of Materials) в формате OWASP CycloneDX.
 
 ## Схема работы
->Здесб написать про сервер и то, как python "подключается" к запущенной JVM.
+Для соединения Python и Java используется библиотека Py4j. Py4J позволяет программам на Python, запущенным в интерпретаторе Python, динамически обращаться к объектам Java на виртуальной машине Java. Методы вызываются так, как если бы объекты Java находились в интерпретаторе Python, а к коллекциям Java можно было бы получить доступ с помощью стандартных методов сбора данных Python. Py4J также позволяет Java-программам вызывать объекты Python.
+
+Py4J — это мост между Python и Java, построенный на сетевом протоколе поверх TCP-сокета.
+Python и JVM обмениваются сообщениями по сети (localhost:port). Не используются JNI (Java Native Interface), Jython, C-биндингов или shared memory — только TCP-соединение и сериализация данных.
+
+```
++--------------------+             TCP socket              +---------------------+
+|     Python side    |  <--------------------------------> |     Java side       |
+|  py4j.java_gateway |     (by default 127.0.0.1:25333)    |  py4j.GatewayServer |
++--------------------+                                     +---------------------+
+```
+
+В модуле lazy_behaviour.py фукнция ``def get_gateway(timeout_seconds=30)`` создает подключение к Java если оно еще не создано, или возвращает объект подключения, если создано. Для защиты используется случайно генерирующийся при каждом создании соединения токен.
 
 ## Структура проекта
 - `./scr/` - Java-файлы для создания сервера 
-- `./bc-java/` - библиотека Bouncy Castle
 - `./generate_sbom.sh` - скрипт для герерации SBOM в формате JSON, продуктами работы являются `sbom-python.json`, `sbom.json`.
-- `./run-java-part.sh` - скрипт для сброки и запуска JVM
+- `./pom.xml` - конфигурационный файл Maven
+- `./requirements.txt` - зависимости для Python
