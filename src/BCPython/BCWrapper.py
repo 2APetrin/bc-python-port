@@ -103,9 +103,9 @@ def set_java_path(pth: str) -> bool:
 
     path = Path(pth)
     if not path.exists():
-        raise FileNotFoundError(f"java_path does not exist: {pth}")
+        raise FileNotFoundError(f"[Python][ERROR] java_path does not exist: {pth}")
     if not path.is_file():
-        raise ValueError(f"java_path does not point to file: {pth}")
+        raise ValueError(f"[Python][ERROR] java_path does not point to file: {pth}")
 
     _java_path = Path(pth)
     return True
