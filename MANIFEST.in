@@ -1,0 +1,2 @@
+include src/BCPython/jar/*.jar
+recursive-include src/BCPython/jar *.jar
