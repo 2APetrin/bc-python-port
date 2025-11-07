@@ -6,6 +6,7 @@ import atexit
 import time
 import secrets
 import subprocess
+import socket
 
 
 _gateway: Optional[JavaGateway] = None
@@ -29,21 +30,12 @@ def _start_gateway(timeout_seconds) -> JavaGateway:
     print("[Python][INFO] Starting Java Gateway")
     _gateway_proc = subprocess.Popen(cmd)
 
-    time.sleep(0.5)
+    if not _wait_for_port(timeout=10):
+        raise RuntimeError("[Python][ERROR] Java Gateway didn't start in time")
 
     gateway = JavaGateway(
         gateway_parameters=GatewayParameters(auth_token=_token)
     )
-
-    # start = time.time()
-    # while time.time() - start < timeout_seconds:
-    #     try:
-    #         gateway = JavaGateway(
-    #             gateway_parameters=GatewayParameters(auth_token=_token)
-    #         )
-    #     except Exception:
-    #         continue
-    #     break
 
     atexit.register(_shutdown_gateway)
     return gateway
@@ -63,6 +55,19 @@ def _shutdown_gateway():
     print("[Python][INFO] Gateway stopped")
 
 
+def _wait_for_port(timeout=10) -> bool:
+    start = time.time()
+    while time.time() - start < timeout:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(0.5)
+            try:
+                s.connect(("127.0.0.1", 25333))
+                return True
+            except (ConnectionRefusedError, OSError):
+                pass
+    return False
+
+
 def get_gateway(timeout_seconds=30) -> JavaGateway:
     global _gateway
     if _gateway is not None:
@@ -77,7 +82,7 @@ def get_gateway(timeout_seconds=30) -> JavaGateway:
                     _gateway.entry_point  # raise exception if not accessible
                     break
                 except Exception:
-                    time.sleep(0.1)
+                    pass
             else:
                 _gateway.shutdown()
                 _gateway = None
