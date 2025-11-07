@@ -69,6 +69,11 @@ $Env:PATH += ";.\apache-maven-3.9.11\bin"
 ```
 mvn package
 ```
+### Собрать wheel & установить
+```
+python3 -m build
+pip install dist/dist/bcpython-0.0.1-py3-none-any.whl
+```
 ### Запустить требуемый python-файл, например, ``example00.py``
 ```
 python3 example00.py

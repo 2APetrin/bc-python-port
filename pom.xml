@@ -28,6 +28,7 @@
     </dependencies>
 
     <build>
+        <directory>${project.basedir}/src/BCPython/jar</directory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

@@ -15,7 +15,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-.venv
+.venv/
+test-venv/
 
 # Maven 
 target/
+src/BCPython/jar/*
