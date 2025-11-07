@@ -146,9 +146,9 @@ class _ConvertionsTest(unittest.TestCase):
         BouncyCastleProvider = self.gw.jvm.org.bouncycastle.jce.provider.BouncyCastleProvider
         Security.addProvider(BouncyCastleProvider())
 
-        MessageDigest = security.MessageDigest
         text_bytes = "hash me please".encode("utf-8")
 
+        MessageDigest = security.MessageDigest
         digest = MessageDigest.getInstance("SHA-256", "BC")
         hash_bytes = digest.digest(text_bytes)
         self.assertEqual(
