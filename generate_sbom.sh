@@ -9,19 +9,19 @@ echo "Generating Java SBOM..."
 mvn cyclonedx:makeAggregateBom > /dev/null
 
 # Соединить два SBOM в один общий
+echo "Merging SBOMs..."
 if [[ -e "cyclonedx-linux-x64" ]]; then
   CYCLONEDX_CMD='./cyclonedx-linux-x64'
 else 
-  # Тут короче нужна обработка винды
-  echo "Error: appropriate cyclonedx-cli not found! Exiting..."
+  echo "Error: failed merging SBOMs, appropriate cyclonedx-cli not found! Please consult the user manual (README)." >&2
+  echo "Exiting..." >&2
   exit 1
 fi
 
-echo "Merging SBOMs..."
 $CYCLONEDX_CMD merge \
   --input-files "./sbom-python.json" \
   --input-files "./target/sbom-java.json" \
-  --output-file ./sbom.json
+  --output-file "./sbom.json"
 
 echo "Validating SBOM..."
 $CYCLONEDX_CMD validate --input-file sbom.json
