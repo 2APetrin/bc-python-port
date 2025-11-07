@@ -1,5 +1,5 @@
-from BCWrapper import get_gateway
-#from BCPython.BCWrapper import get_gateway
+#from BCWrapper import get_gateway
+from BCPython.BCWrapper import get_gateway
 
 gw = get_gateway()
 
