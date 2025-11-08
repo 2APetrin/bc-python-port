@@ -2,7 +2,7 @@ from py4j.java_gateway import JavaObject
 from decimal import Decimal
 from typing import Any, Dict, List
 from typing import Optional
-from BCWrapper import get_gateway
+from BCPython.BCWrapper import get_gateway
 import unittest
 
 

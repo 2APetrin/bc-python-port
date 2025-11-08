@@ -1,6 +1,8 @@
 from os import urandom
-from BCWrapper import get_gateway
-from Convertions import java_to_py
+#from BCWrapper import get_gateway
+from BCPython.BCWrapper import get_gateway
+#from Convertions import java_to_py
+from BCPython.Convertions import java_to_py
 
 gw = get_gateway()
 security = gw.jvm.java.security
