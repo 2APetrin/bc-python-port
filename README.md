@@ -16,6 +16,9 @@ BC Python Port - это Python-интерфейс для криптографи�
 - [Структура проекта](#структура-проекта)
 
 ## Запуск
+
+> При разработке и тестировании были использованы указанные версии. При желании можно использовать другие версии, но работоспособность проекта не гарантируется.
+
 Для сборки и последующего запуска необходимо
 ### Установить Python и pip, используются ``Python 3.12.3`` и ``pip 24.0``
 Для debian-based дистрибутивов Linux
@@ -25,7 +28,7 @@ sudo apt install python3
 Для Windows использовать установщик с [официального сайта](https://www.python.org/downloads/release/pymanager-250/) или установить из Microsoft Store. При использовании установщика выбрать **.msix** файл, а не .msi. \
 Если не удаётся выполнить установку .msix обычным способом, то воспользоваться PowerShell:
 ```
-Add-AppxPackage .\Downloads\python-manager-25.0.msix
+Add-AppxPackage .\Downloads\python-manager-24.0.msix
 python
 ```
 ### Установить зависимости для Python
@@ -51,10 +54,10 @@ pip install -r requirements.txt
 ```
 sudo apt install openjdk-21-jdk
 ```
-Для Windows использовать установщик c [официального сайта](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk25-windows).
+Для Windows использовать установщик c [официального сайта](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk21-windows).
 После этого из PowerShell добавить Java в PATH
 ```
-$Env:PATH += ";C:\Program Files\Java\jdk-25\bin"
+$Env:PATH += ";C:\Program Files\Java\jdk-21\bin"
 ```
 
 ### Установить [Maven](https://maven.apache.org/install.html), используется `Apache Maven 3.8.7`
@@ -65,7 +68,7 @@ sudo apt install maven
 ```
 Для Windows скачать [Binary Distribution](https://maven.apache.org/download.cgi). Распаковать в корневую директорию проекта и оттуда добавить в PATH
 ```
-$Env:PATH += ";.\apache-maven-3.9.11\bin"
+$Env:PATH += ";.\apache-maven-3.8.7\bin"
 ```
 ### Собрать Java-часть с помощью maven
 ```
@@ -75,15 +78,15 @@ mvn package
 ```
 pip install build
 python3 -m build
-pip install dist/bcpython-0.0.1-py3-none-any.whl
+pip install dist/bcpython-0.0.2-py3-none-any.whl
 ```
 **При разработке** для того, чтобы не пересобирать пакет при каждом изменеии модулей, вместо этого
 ```
 pip install -e .
 ```
-### Запустить требуемый python-файл, например, ``example00.py``
+### Запустить требуемый python-файл, например, ``examples/example-bc-aes-cbc.py``
 ```
-python3 example00.py
+python3 examples/example-bc-aes-cbc.py
 ```
 
 ## Генерация SBOM
@@ -131,12 +134,12 @@ Python и JVM обмениваются сообщениями по сети (loc
 > Исключение byte[], который сразу переводится в python bytes.
 
 Целью было передать тяжелые вычисления в jvm, а потом использовать результаты в python. Чтобы сконвертировать JavaObject в соответствующий ему python объект в нашей библиотеке есть:
-- `is_java_proxy`,
-- `java_collection_to_list`,
-- `java_map_to_dict`,
-- `java_enum_to_str`,
-- `java_bigdecimal_to_decimal`,
-- `java_biginteger_to_int`,
+- `is_java_proxy`
+- `java_collection_to_list`
+- `java_map_to_dict`
+- `java_enum_to_str`
+- `java_bigdecimal_to_decimal`
+- `java_biginteger_to_int`
 - `java_to_py`
 
 Это позволит избежать оверхеда на TCP передачу сериализованных сообщений для небольших операций.
@@ -184,7 +187,7 @@ hash_bytes = digest.digest(text_bytes)
 ## Структура проекта
 - `src/BCPython/` - Python-модули вместе с необходимыми файлами для сборки пакета
 - `src/main/java/` - Java-файлы для запуска JVM-сервера Py4J
-- `src/main/java/benchmarks/` -  Java-файлы для бенчмарков
+- `benchmarks/` -  Java и Python файлы для бенчмарков
 - `examples/` - примеры использования библиотеки
 - `img/` - графики бенчмарков
 - `tests/` - Python-тесты пакета
@@ -214,3 +217,19 @@ mvn exec:java -Dexec.mainClass="benchmarks.Sha256Benchmark"
 
 
 ![SHA256 performance](img/sha256.png)
+
+System:
+  Kernel: 5.15.0-91-generic x86_64 bits: 64 compiler: gcc v: 11.4.0
+    Desktop: Cinnamon 6.0.4 Distro: Linux Mint 21.3 Virginia
+    base: Ubuntu 22.04 jammy
+
+CPU:
+  Info: quad core model: Intel Core i5-1035G1 bits: 64 type: MT MCP
+    arch: Ice Lake rev: 5 cache: L1: 320 KiB L2: 2 MiB L3: 6 MiB
+Info:
+  Memory: 7.44 GiB
+
+
+turboboost OFF
+governor performance
+fixed CPU frequency 3000 MHz
