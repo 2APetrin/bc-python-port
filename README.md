@@ -84,9 +84,9 @@ pip install dist/bcpython-0.0.2-py3-none-any.whl
 ```
 pip install -e .
 ```
-### Запустить требуемый python-файл, например, ``examples/example-bc-aes-cbc.py``
+### Запустить требуемый python-файл, например, ``examples/example-bc-rsa-sign-verify.py``
 ```
-python3 examples/example-bc-aes-cbc.py
+python3 examples/example-bc-rsa-sign-verify.py
 ```
 
 ## Генерация SBOM
