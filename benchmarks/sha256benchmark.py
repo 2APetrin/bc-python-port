@@ -1,6 +1,4 @@
 from BCPython.BCWrapper import get_gateway
-import random
-import string
 import timeit
 
 lengths = [512, 1024, 2048, 4096, 8192, 16384, 32768, 65536]
@@ -27,7 +25,7 @@ for i in range(len(lengths)):
 
     for j in range(5):
         timeit.timeit(sha256_bouncycastle, number=iters) # warmup
-    
+
     time = 0.0
     for k in range(5):
         time += timeit.timeit(sha256_bouncycastle, number=iters)

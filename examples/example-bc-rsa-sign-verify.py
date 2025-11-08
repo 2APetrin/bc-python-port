@@ -1,4 +1,4 @@
-from BCWrapper import get_gateway
+from BCPython.BCWrapper import get_gateway
 
 gw = get_gateway()
 security = gw.jvm.java.security

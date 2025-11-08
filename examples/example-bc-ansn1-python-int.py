@@ -1,5 +1,5 @@
-from BCWrapper import get_gateway
-from Convertions import java_to_py, is_java_proxy
+from BCPython.BCWrapper import get_gateway
+from BCPython.Convertions import java_to_py, is_java_proxy
 
 gw = get_gateway()
 asn1 = gw.jvm.org.bouncycastle.asn1
